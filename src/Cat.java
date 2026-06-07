@@ -1,0 +1,18 @@
+public class Cat extends Pet {
+    private static final int GRAMS_PER_MEAL = 100;
+    private static final int MEALS_PER_DAY = 3;
+
+    public Cat(String name, int age, String ownerName) {
+        super(name, age, ownerName, GRAMS_PER_MEAL, MEALS_PER_DAY);
+    }
+
+    @Override
+    public String getCareInstructions() {
+        return "Clean litter box";
+    }
+
+    @Override
+    public String toString() {
+        return getBaseInfo() + "\n" + (isFedToday ? "Fed Today" : "Not Fed");
+    }
+}
